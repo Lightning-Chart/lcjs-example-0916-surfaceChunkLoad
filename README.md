@@ -55,7 +55,7 @@ Official [API documentation][1] can be found on [LightningChart][2] website.
 
 If the docs and other materials do not solve your problem as well as implementation help is needed, ask on [StackOverflow][3] (tagged lightningchart).
 
-If you think you found a bug in the LightningChart JavaScript library, please contact support@lightningchart.com.
+If you think you found a bug in the LightningChart JavaScript library, please contact sales@lightningchart.com.
 
 Direct developer email support can be purchased through a [Support Plan][4] or by contacting sales@lightningchart.com.
 
@@ -68,11 +68,11 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[3D chart]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/Chart3D.html
-[3D axis]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/Axis3D.html
-[Paletted Fill]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/PalettedFill.html
-[Color lookup table]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/LUT.html
-[Color RGBA factory]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/functions/ColorRGBA.html
-[Surface Grid Series]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/SurfaceGridSeries3D.html
-[Legend Box]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/Chart.html#addLegendBox
+[3D chart]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/Chart3D.html
+[3D axis]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/Axis3D.html
+[Paletted Fill]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/PalettedFill.html
+[Color lookup table]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/LUT.html
+[Color RGBA factory]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/functions/ColorRGBA.html
+[Surface Grid Series]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/SurfaceGridSeries3D.html
+[Legend Box]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/Chart.html#addLegendBox
 
