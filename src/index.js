@@ -17,7 +17,7 @@ const CHUNK_SIZE = 1000
 
 // Create chart and series.
 const chart = lightningChart().Chart3D({
-    theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined
+    theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
 })
 
 const theme = chart.getTheme()
