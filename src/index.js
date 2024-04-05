@@ -16,7 +16,9 @@ const ROWS = 2000
 const CHUNK_SIZE = 1000
 
 // Create chart and series.
-const chart = lightningChart().Chart3D({
+const chart = lightningChart({
+            resourcesBaseUrl: new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'resources/',
+        }).Chart3D({
     theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
 })
 
