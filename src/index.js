@@ -3,10 +3,10 @@
  */
 
 // Import LightningChartJS
-const lcjs = require('@arction/lcjs')
+const lcjs = require('@lightningchart/lcjs')
 
 // Import xydata
-const xydata = require('@arction/xydata')
+const xydata = require('@lightningchart/xydata')
 
 const { lightningChart, LUT, PalettedFill, emptyLine, LegendBoxBuilders, ColorShadingStyles, regularColorSteps, Themes } = lcjs
 const { createWaterDropDataGenerator } = xydata
