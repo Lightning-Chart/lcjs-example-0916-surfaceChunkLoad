@@ -8,7 +8,7 @@ const lcjs = require('@lightningchart/lcjs')
 // Import xydata
 const xydata = require('@lightningchart/xydata')
 
-const { lightningChart, LUT, PalettedFill, emptyLine, LegendBoxBuilders, ColorShadingStyles, regularColorSteps, Themes } = lcjs
+const { lightningChart, LUT, PalettedFill, emptyLine, ColorShadingStyles, regularColorSteps, Themes } = lcjs
 const { createWaterDropDataGenerator } = xydata
 
 const COLUMNS = 2000
@@ -19,10 +19,17 @@ const CHUNK_SIZE = 1000
 const chart = lightningChart({
             resourcesBaseUrl: new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'resources/',
         }).Chart3D({
+    legend: { addEntriesAutomatically: false },
     theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
 })
 
 const theme = chart.getTheme()
+const lut = new LUT({
+    interpolate: false,
+    steps: regularColorSteps(0, 75, theme.examples.coldHotColorPalette),
+})
+chart.legend.add(lut, { text: 'Level' })
+
 const surfaceGrid = chart
     .addSurfaceGridSeries({
         columns: COLUMNS,
@@ -32,22 +39,10 @@ const surfaceGrid = chart
     .setFillStyle(
         new PalettedFill({
             lookUpProperty: 'y',
-            lut: new LUT({
-                interpolate: false,
-                steps: regularColorSteps(0, 75, theme.examples.coldHotColorPalette),
-            }),
+            lut,
         }),
     )
     .setWireframeStyle(emptyLine)
-
-const legend = chart
-    .addLegendBox(LegendBoxBuilders.HorizontalLegendBox)
-    .add(chart)
-    // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
-    .setAutoDispose({
-        type: 'max-width',
-        maxWidth: 0.8,
-    })
 
 // Load data set one "chunk" at a time. Chunk refers to a smaller sub set of the entire data set.
 // Loading large data sets in parts is extremely efficient in terms of memory usage and application usability.
